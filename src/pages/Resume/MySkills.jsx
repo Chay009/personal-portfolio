@@ -16,7 +16,7 @@ const MySkills = () => {
           {Skill_data.map((image, index) => (
             <SkillBadge
               key={index}
-             src={`${IMAGE_RELATIVE_PATH}${image.Image}`}
+             src={image.Image}
               width={image.width}
               height={image.height}
               index={index}
@@ -28,7 +28,7 @@ const MySkills = () => {
           {Frontend_skill.map((image, index) => (
             <SkillBadge
               key={index}
-              src={`${IMAGE_RELATIVE_PATH}${image.Image}`}
+              src={image.Image}
               width={image.width}
               height={image.height}
               index={index}
@@ -39,7 +39,7 @@ const MySkills = () => {
           {Backend_skill.map((image, index) => (
             <SkillBadge
               key={index}
-              src={`${IMAGE_RELATIVE_PATH}${image.Image}`}
+              src={image.Image}
               width={image.width}
               height={image.height}
               index={index}
@@ -50,7 +50,7 @@ const MySkills = () => {
           {Full_stack.map((image, index) => (
             <SkillBadge
               key={index}
-              src={`${IMAGE_RELATIVE_PATH}${image.Image}`}
+              src={image.Image}
               width={image.width}
               height={image.height}
               index={index}
@@ -61,7 +61,7 @@ const MySkills = () => {
           {Other_skill.map((image, index) => (
             <SkillBadge
               key={index}
-              src={`${IMAGE_RELATIVE_PATH}${image.Image}`}
+              src={image.Image}
               width={image.width}
               height={image.height}
               index={index}

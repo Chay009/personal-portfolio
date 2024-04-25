@@ -15,9 +15,9 @@ const servicesData = [
     description: "Professional development of applications for iOS and Android."
   },
   {
-    title: "Photography",
+    title: "sports",
     icon: "/images/icon-photo.svg",
-    description: "I make high-quality photos of any category at a professional level."
+    description: "I play sports professional level."
   }
 ];
 
