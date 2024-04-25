@@ -2,6 +2,7 @@ import React from 'react'
 import { Backend_skill,Frontend_skill,Full_stack,Other_skill,Skill_data} from '../../utils/skills';
 import SkillBadge from '../../components/SkillBadge';
 
+const IMAGE_RELATIVE_PATH='../../../public/'
 const MySkills = () => {
     return (
       <section
@@ -15,7 +16,7 @@ const MySkills = () => {
           {Skill_data.map((image, index) => (
             <SkillBadge
               key={index}
-              src={image.Image}
+             src={`${IMAGE_RELATIVE_PATH}${image.Image}`}
               width={image.width}
               height={image.height}
               index={index}
@@ -27,7 +28,7 @@ const MySkills = () => {
           {Frontend_skill.map((image, index) => (
             <SkillBadge
               key={index}
-              src={image.Image}
+              src={`${IMAGE_RELATIVE_PATH}${image.Image}`}
               width={image.width}
               height={image.height}
               index={index}
@@ -38,7 +39,7 @@ const MySkills = () => {
           {Backend_skill.map((image, index) => (
             <SkillBadge
               key={index}
-              src={image.Image}
+              src={`${IMAGE_RELATIVE_PATH}${image.Image}`}
               width={image.width}
               height={image.height}
               index={index}
@@ -49,7 +50,7 @@ const MySkills = () => {
           {Full_stack.map((image, index) => (
             <SkillBadge
               key={index}
-              src={image.Image}
+              src={`${IMAGE_RELATIVE_PATH}${image.Image}`}
               width={image.width}
               height={image.height}
               index={index}
@@ -60,7 +61,7 @@ const MySkills = () => {
           {Other_skill.map((image, index) => (
             <SkillBadge
               key={index}
-              src={image.Image}
+              src={`${IMAGE_RELATIVE_PATH}${image.Image}`}
               width={image.width}
               height={image.height}
               index={index}

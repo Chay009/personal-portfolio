@@ -87,7 +87,7 @@ const Resume = () => {
 
         <motion.ol  className="timeline-list pt-3" initial="hidden" animate="visible" variants={slideInFromRight(0.5)} transition={{ duration: 0.5 }}>
           {experienceData.map((item, index) => (
-           <TimelineItem title={item.title} date={item.date} description={item.description} />
+           <TimelineItem key={index} title={item.title} date={item.date} description={item.description} />
           ))}
         </motion.ol>
       </div>
@@ -102,7 +102,7 @@ const Resume = () => {
         </div>
         <motion.ol  className="timeline-list flex flex-col gap-2" initial="hidden" animate="visible" variants={slideInFromRight(0.5)} transition={{ duration: 0.5 }}>
           {educationData.map((item, index) => (
-            <TimelineItem title={item.title} date={item.date} description={item.description} />
+            <TimelineItem key={index} title={item.title} date={item.date} description={item.description} />
           ))}
         </motion.ol>
       </div>

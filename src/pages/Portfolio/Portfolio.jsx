@@ -1,8 +1,12 @@
 import { useState, useEffect } from 'react';
-
+import projectsData from '../../constants/projects';
 import { EyeIcon } from '@heroicons/react/20/solid';
 
+
+const IMAGE_RELATIVE_PATH='../../../public/'
 const Portfolio = () => {
+
+  
   // State to store project data and filtered projects
   const [projects, setProjects] = useState([]);
   const [filteredProjects, setFilteredProjects] = useState([]);
@@ -11,15 +15,13 @@ const Portfolio = () => {
   // State to store the selected category
   const [selectedCategory, setSelectedCategory] = useState('All');
 
-  // Load project data from projects.json
+  // Load project data from projects.js
   useEffect(() => {
-    fetch('src/constants/projects.json')
-      .then(response => response.json())
-      .then(data => {
-        setProjects(data);
-        setFilteredProjects(data);
-      })
-      .catch(error => console.error('Error loading project data:', error));
+   
+    setProjects(projectsData);
+    setFilteredProjects(projectsData);
+    
+      
   }, []);
 
   // Function to handle category filter selection
@@ -102,7 +104,7 @@ const Portfolio = () => {
                   <div className="project-item-icon-box">
                    <EyeIcon width={20}/>
                   </div>
-                  <img src={project.image} alt={project.title} loading="lazy" />
+                  <img src={`${IMAGE_RELATIVE_PATH}${project.image}`} alt={project.title} loading="lazy" />
                 </figure>
                 <h3 className="project-title">{project.title}</h3>
                 <h6 className='text-white'>project description</h6>

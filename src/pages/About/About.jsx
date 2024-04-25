@@ -2,44 +2,22 @@
 
 import { useEffect, useState } from "react"
 import Testimonial from "./Testimonial";
+import testimonialsData from "../../constants/testimonials";
 import Service from "./Service";
+import servicesData from "../../constants/services";
 import { motion } from "framer-motion";
 import { slideInFromLeft } from "../../utils/motion";
 import { CommandLineIcon } from "@heroicons/react/24/solid";
 
 
-const servicesData = [
-  {
-    
-    title: "Web development",
-    description: "I'm all about building websites that work like a charm and load lightning fast. With my expertise in Progressive Web App (PWA) development, I make sure your site runs smoothly on any device, without sacrificing performance for looks."
-  },
-  {
-    icon: "/images/icon-design.svg",
-    title: "Software Engineering",
-    description: "I'm all about crafting sleek, top-notch software solutions, especially in cross-platform development."
-  },
-  {
-    icon: "/images/icon-photo.svg",
-    title: "Research and Study",
-    description: "I'm a total tech geek, always diving into the fascinating realms of software architecture, machine learning, and AI. You'll often find me exploring blogs and articles to keep up with the latest trends and happenings in the tech world. It's my way of staying ahead of the curve!"
-  },
-  {
-    icon: "/images/icon-app.svg",
-    title: "Cross-Platform Mobile App Development",
-    description: "I specialize in making apps that work like a charm on both iOS and Android. No platform bias here!"
-  },
-  
-];
 
 
 const About = () => {
   const [testimonials , setTestimonials ] = useState([]);
   useEffect(()=> {
-    fetch('src/constants/testimonials.json').then(res => res.json()).then(data => {
-      console.log(data)
-      setTestimonials(data)
-    });
+    
+      setTestimonials(testimonialsData)
+  
   }, [])
   return (
     

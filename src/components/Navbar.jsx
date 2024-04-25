@@ -5,24 +5,24 @@ const Navbar = () => {
     <nav className="navbar">
     <ul className="navbar-list">
       <li className="navbar-item">
-        <NavLink to="/welcome" className="navbar-link" data-nav-link>
+        <NavLink to="/" className="navbar-link" data-nav-link>
           Welcome
         </NavLink>
       </li>
       <li className="navbar-item">
-        <NavLink to="/" className="navbar-link" data-nav-link>
+        <NavLink to="/my/about" className="navbar-link" data-nav-link>
           About
         </NavLink>
       </li>
 
       <li className="navbar-item">
-        <NavLink to="/resume" className="navbar-link" data-nav-link>
+        <NavLink to="/my/resume" className="navbar-link" data-nav-link>
           Resume
         </NavLink>
       </li>
 
       <li className="navbar-item">
-        <NavLink to="/projects" className="navbar-link" data-nav-link>
+        <NavLink to="/my/projects" className="navbar-link" data-nav-link>
          Projects
         </NavLink>
       </li>
@@ -30,7 +30,7 @@ const Navbar = () => {
      
 
       <li className="navbar-item">
-        <NavLink to="/contact" className="navbar-link" data-nav-link>
+        <NavLink to="/my/contact" className="navbar-link" data-nav-link>
           Contact
         </NavLink>
       </li>

@@ -13,11 +13,11 @@ const LazyWelcome = React.lazy(() => import('./pages/Welcome/Welcome.jsx'));
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/my",
    element:<App/>,
     children: [
       {
-        path: "/",
+        path: "about",
         element: (
           <Suspense fallback={<div className="flex justify-center items-center h-screen text-teal-300">Loading...</div>}>
             <LazyAbout />
@@ -25,7 +25,7 @@ const router = createBrowserRouter([
         ),
       },
       {
-        path: "/resume",
+        path: "resume",
         element: (
           <Suspense fallback={<div className="flex justify-center items-center h-screen text-teal-300">Loading...</div>}>
             <LazyResume />
@@ -33,7 +33,7 @@ const router = createBrowserRouter([
         ),
       },
       {
-        path: "/projects",
+        path: "projects",
         element: (
           <Suspense fallback={<div className="flex justify-center items-center h-screen text-teal-300">Loading...</div>}>
             <LazyPortfolio />
@@ -41,7 +41,7 @@ const router = createBrowserRouter([
         ),
       },
       {
-        path: "/contact",
+        path: "contact",
         element: (
           <Suspense fallback={<div className="flex justify-center items-center h-screen text-teal-300">Loading...</div>}>
             <LazyContact />
@@ -51,7 +51,7 @@ const router = createBrowserRouter([
     ],
   },
   {
-    path: "/welcome",
+    path: "/",
     element: (
       <Suspense fallback={<div className="flex justify-center items-center h-screen">Loading...</div>}>
         <LazyWelcome />
